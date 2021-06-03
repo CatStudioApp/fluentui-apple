@@ -318,11 +318,18 @@ open class TableViewCell: UITableViewCell {
         let textAreaLeadingOffset = self.textAreaLeadingOffset(customViewSize: customViewSize, isInSelectionMode: isInSelectionMode, paddingLeading: paddingLeading)
         let textAreaTrailingOffset = self.textAreaTrailingOffset(customAccessoryView: customAccessoryView, customAccessoryViewExtendsToEdge: customAccessoryViewExtendsToEdge, accessoryType: accessoryType, paddingTrailing: paddingTrailing)
         var textAreaWidth = containerWidth - (textAreaLeadingOffset + textAreaTrailingOffset)
-        if textAreaWidth < Constants.textAreaMinWidth, let customAccessoryView = customAccessoryView {
-            let oldAccessoryViewWidth = customAccessoryView.frame.width
-            let availableWidth = oldAccessoryViewWidth - (Constants.textAreaMinWidth - textAreaWidth)
-            customAccessoryView.frame.size = customAccessoryView.systemLayoutSizeFitting(CGSize(width: availableWidth, height: .infinity))
-            textAreaWidth += oldAccessoryViewWidth - customAccessoryView.frame.width
+        if let customAccessoryView = customAccessoryView {
+            // Trigger layout so we can have the frame calculated correctly at this point in time
+            customAccessoryView.layoutSubviews()
+
+            if textAreaWidth < Constants.textAreaMinWidth {
+                let oldAccessoryViewWidth = customAccessoryView.frame.width
+                let availableWidth = oldAccessoryViewWidth - (Constants.textAreaMinWidth - textAreaWidth)
+                customAccessoryView.frame.size = customAccessoryView.systemLayoutSizeFitting(CGSize(width: availableWidth, height: .infinity))
+                textAreaWidth += oldAccessoryViewWidth
+            }
+
+            textAreaWidth -= customAccessoryView.frame.width
         }
 
         let textAreaHeight = self.textAreaHeight(
