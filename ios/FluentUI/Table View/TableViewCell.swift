@@ -320,7 +320,7 @@ open class TableViewCell: UITableViewCell {
         var textAreaWidth = containerWidth - (textAreaLeadingOffset + textAreaTrailingOffset)
         if let customAccessoryView = customAccessoryView {
             // Trigger layout so we can have the frame calculated correctly at this point in time
-            customAccessoryView.layoutSubviews()
+            customAccessoryView.layoutIfNeeded()
 
             if textAreaWidth < Constants.textAreaMinWidth {
                 let oldAccessoryViewWidth = customAccessoryView.frame.width
