@@ -147,6 +147,7 @@
 		5314E30325F0260E0099271A /* AccessibleViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD599D052134A682008845EE /* AccessibleViewDelegate.swift */; };
 		537315B325438B15001FD14C /* iOS13_4_compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537315B225438B15001FD14C /* iOS13_4_compatibility.swift */; };
 		53BCB0CE253A4E8D00620960 /* Obscurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BCB0CD253A4E8C00620960 /* Obscurable.swift */; };
+		5EB3B67A267EC6A600FBD0B8 /* AssertionFailureLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3B679267EC6A600FBD0B8 /* AssertionFailureLogger.swift */; };
 		7D0931C324AAAC9B0072458A /* SideTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0931C224AAAC8C0072458A /* SideTabBar.swift */; };
 		7D23482724D88DE600FBE057 /* AvatarGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23482624D88DDF00FBE057 /* AvatarGroupView.swift */; };
 		7DC2FB2824C0ED1600367A55 /* TableViewCellFileAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2FB2724C0ED1100367A55 /* TableViewCellFileAccessoryView.swift */; };
@@ -341,6 +342,7 @@
 		53FC90F825673626008A06FD /* FluentUI_framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FluentUI_framework.xcconfig; sourceTree = "<group>"; };
 		53FC90F925673627008A06FD /* FluentUILib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FluentUILib.xcconfig; sourceTree = "<group>"; };
 		53FC90FA25673627008A06FD /* FluentUIResources.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FluentUIResources.xcconfig; sourceTree = "<group>"; };
+		5EB3B679267EC6A600FBD0B8 /* AssertionFailureLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionFailureLogger.swift; sourceTree = "<group>"; };
 		7D0931C224AAAC8C0072458A /* SideTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideTabBar.swift; sourceTree = "<group>"; };
 		7D23482624D88DDF00FBE057 /* AvatarGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarGroupView.swift; sourceTree = "<group>"; };
 		7DC2FB2724C0ED1100367A55 /* TableViewCellFileAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellFileAccessoryView.swift; sourceTree = "<group>"; };
@@ -884,6 +886,7 @@
 				A559BB82212B7D870055E107 /* FluentUIFramework.swift */,
 				A5CEC16E20D98F340016922A /* Fonts.swift */,
 				537315B225438B15001FD14C /* iOS13_4_compatibility.swift */,
+				5EB3B679267EC6A600FBD0B8 /* AssertionFailureLogger.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1223,6 +1226,8 @@
 				A542A9D5226FBEF000204A52 /* PBXTargetDependency */,
 			);
 			name = FluentUI;
+			packageProductDependencies = (
+			);
 			productName = OfficeUIFabric;
 			productReference = A5CEC15120D980B20016922A /* FluentUI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1331,6 +1336,8 @@
 				"zh-Hant",
 			);
 			mainGroup = A5CEC14720D980B20016922A;
+			packageReferences = (
+			);
 			productRefGroup = A5CEC15220D980B20016922A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1589,6 +1596,7 @@
 				FD41C8B222DD3BB70086F899 /* UIScrollView+Extensions.swift in Sources */,
 				8035CACB26377C14007B3FD1 /* CommandingItem.swift in Sources */,
 				B483323321CC71940022B4CC /* HUDView.swift in Sources */,
+				5EB3B67A267EC6A600FBD0B8 /* AssertionFailureLogger.swift in Sources */,
 				FD41C89422DD13230086F899 /* LargeTitleView.swift in Sources */,
 				C0938E44235E8ED500256251 /* AnimationSynchronizer.swift in Sources */,
 				80AECBD92629F18E005AF2F3 /* BottomSheetController.swift in Sources */,
