@@ -5,6 +5,14 @@
 
 import UIKit
 
+private func assertionFailureLog(_ errorMessage: String) {
+  #if DEBUG
+  preconditionFailure(errorMessage)
+  #else
+  print(errorMessage)
+  #endif
+}
+
 // MARK: Tooltip
 
 @available(*, deprecated, renamed: "Tooltip")
